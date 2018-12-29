@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Geolocation from "@/components/Geolocation"
+import Geolocation from "../components/Geolocation.vue"
 
 export default {
   components: {

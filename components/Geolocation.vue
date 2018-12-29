@@ -18,17 +18,17 @@ export default {
     }
   },
   mounted() {
-    //get current location
+    // get current location
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         pos => {
-          this.lat = pos.coords.latitude
-          this.lng = pos.coords.longitude
+          this.lat = pos.coords.latitude;
+          this.lng = pos.coords.longitude;
         },
         () => {
           // timeout, centre by default values
-          this.lat = 39.0997
-          this.lng = 94.5786
+          this.lat = 39.0997;
+          this.lng = 94.5786;
         }
       )
     }
