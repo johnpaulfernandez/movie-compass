@@ -8,9 +8,9 @@ module.exports = {
     parser: 'babel-eslint',
   },
   extends: [
-    "airbnb-base",
-    "plugin:vue/recommended",
-    "prettier",
+    'airbnb-base',
+    'plugin:vue/recommended',
+    'prettier',
   ],
   // required to lint *.vue files
   plugins: [
