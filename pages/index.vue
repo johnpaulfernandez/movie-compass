@@ -1,11 +1,9 @@
 <template>
-  <section class="container"> 
-    <Geolocation/>
-  </section>
+  <section class="container"><Geolocation /></section>
 </template>
 
 <script>
-import Geolocation from '@/components/Geolocation'
+import Geolocation from "@/components/Geolocation"
 
 export default {
   components: {
@@ -14,6 +12,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
