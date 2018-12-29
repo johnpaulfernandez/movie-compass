@@ -10,18 +10,18 @@
 
 <script>
 export default {
-  name: "Geolocation",
+  name: 'Geolocation',
   data() {
     return {
       lat: 0,
-      lng: 0
-    }
+      lng: 0,
+    };
   },
   mounted() {
     // get current location
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        pos => {
+        (pos) => {
           this.lat = pos.coords.latitude;
           this.lng = pos.coords.longitude;
         },
@@ -29,11 +29,11 @@ export default {
           // timeout, centre by default values
           this.lat = 39.0997;
           this.lng = 94.5786;
-        }
-      )
+        },
+      );
     }
-  }
-}
+  },
+};
 </script>
 
 <style></style>

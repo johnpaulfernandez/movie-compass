@@ -8,12 +8,9 @@ module.exports = {
     parser: 'babel-eslint',
   },
   extends: [
-    "eslint:recommended",
     "airbnb-base",
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
     "plugin:vue/recommended",
-    "plugin:prettier/recommended",
+    "prettier",
   ],
   // required to lint *.vue files
   plugins: [
@@ -21,10 +18,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    "semi": [2, "never"],
-    "no-console": "off",
-    "vue/max-attributes-per-line": "off",
-    "prettier/prettier": ["error", { "semi": false }],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   },
