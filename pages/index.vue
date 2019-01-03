@@ -1,15 +1,15 @@
 <template>
-  <section class="container">
-    <Geolocation />
+  <section class="container-fluid">
+    <Navbar />
   </section>
 </template>
 
 <script>
-import Geolocation from "../components/Geolocation.vue";
+import Navbar from '../components/Navbar.vue';
 
 export default {
   components: {
-    Geolocation
+    Navbar
   }
 };
 </script>
