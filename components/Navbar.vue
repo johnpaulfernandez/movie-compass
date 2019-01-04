@@ -1,13 +1,13 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="info">
+  <b-navbar toggleable="md" type="dark" variant="info" class="fixed-top">
     <b-navbar-toggle target="nav_collapse"/>
 
-    <b-navbar-brand href="#">Movie Compass</b-navbar-brand>
+    <nuxt-link to="/" class="navbar-brand mr-5">Movie Compass</nuxt-link>
 
     <b-collapse id="nav_collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#">Listings</b-nav-item>
+        <nuxt-link to="/" class="nav-link">Home</nuxt-link>
+        <nuxt-link to="/listings" class="nav-link">Listings</nuxt-link>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
