@@ -1,19 +1,19 @@
 <template>
   <section class="container-fluid">
-    <Navbar />
+    <Poster/>
+    <div style="height: 1000px"/>
   </section>
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue';
+import Poster from '../components/Poster.vue';
 
 export default {
   components: {
-    Navbar
+    Poster
   }
 };
 </script>
 
 <style lang="scss">
-@import './styles/custom-bootstrap.scss';
 </style>

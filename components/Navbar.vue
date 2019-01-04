@@ -1,10 +1,10 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="info" class="fixed-top">
+  <b-navbar toggleable="md" type="dark" variant="info" class="fixed-top px-sm-5">
     <b-navbar-toggle target="nav_collapse"/>
 
-    <nuxt-link to="/" class="navbar-brand mr-5">Movie Compass</nuxt-link>
+    <nuxt-link to="/" class="navbar-brand">Movie Compass</nuxt-link>
 
-    <b-collapse id="nav_collapse" is-nav>
+    <b-collapse id="nav_collapse" class="ml-md-5" is-nav>
       <b-navbar-nav>
         <nuxt-link to="/" class="nav-link">Home</nuxt-link>
         <nuxt-link to="/listings" class="nav-link">Listings</nuxt-link>
