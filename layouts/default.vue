@@ -29,4 +29,54 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(xs) {
+  html {
+    font-size: 0.8rem;
+  }
+  h1,
+  #icon {
+    font-size: 2.5rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  h1,
+  #icon {
+    font-size: 3rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  h1,
+  #icon {
+    font-size: 3rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  #icon {
+    font-size: 4rem;
+  }
+}
 </style>
