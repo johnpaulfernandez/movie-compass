@@ -1,16 +1,18 @@
 <template>
   <section class="container-fluid">
     <Poster/>
-    <div style="height: 1000px"/>
+    <Content/>
   </section>
 </template>
 
 <script>
 import Poster from '../components/Poster.vue';
+import Content from '../components/Content.vue';
 
 export default {
   components: {
-    Poster
+    Poster,
+    Content
   }
 };
 </script>
