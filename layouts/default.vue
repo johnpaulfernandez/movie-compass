@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue';
+import Navbar from "../components/Navbar.vue";
 
 export default {
   components: {
@@ -17,10 +17,11 @@ export default {
 
 
 <style lang="scss">
-@import './styles/custom-bootstrap.scss';
+@import "./styles/custom-bootstrap.scss";
 
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -36,11 +37,11 @@ html {
 
 @include media-breakpoint-up(xs) {
   html {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   h1,
   #icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
