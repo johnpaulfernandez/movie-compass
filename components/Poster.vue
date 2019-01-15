@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="parallax-home mb-4 d-flex flex-column">
+    <div class="parallax-home d-flex flex-column">
       <div
         class="d-flex justify-content-between align-items-center text-light mx-4 my-auto"
         style="font-size: 6em"
@@ -37,7 +37,7 @@ export default {};
 .parallax-home {
   background-image: url('../static/cover_poster.jpg');
 
-  height: 95vh;
+  height: 90vh;
 
   padding-top: 15vh;
 
