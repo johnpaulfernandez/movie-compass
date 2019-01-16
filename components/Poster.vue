@@ -10,12 +10,14 @@
           >
 
           <div
-            class="row h-100 justify-content-between align-items-center text-light ml-auto px-4 parallax-overlay"
-            style="font-size: 4em"
-          >
-            <font-awesome-icon icon="chevron-left" class="d-none d-sm-block"/>
-            <font-awesome-icon icon="chevron-right" class="d-none d-sm-block"/>
-          </div>
+            slot="button-prev"
+            class="swiper-button-prev d-none d-sm-block ml-4 swiper-button-white"
+          />
+          <div
+            slot="button-next"
+            class="swiper-button-next d-none d-sm-block mr-4 swiper-button-white"
+          />
+
           <div class="row text-light bg-gradient ml-auto parallax-overlay">
             <div class="col-lg-8 px-5 p-2">
               <h1 class="text-uppercase">{{ movie.title }}</h1>
@@ -49,21 +51,17 @@ export default {
   data() {
     return {
       swiperOption: {
+        speed: 800,
         loop: false,
         slidesPerView: 'auto',
         centeredSlides: true,
-        spaceBetween: 0,
+        spaceBetween: 15,
         pagination: {
-          el: '.swiper-pagination',
-          dynamicBullets: true
+          el: '.swiper-pagination'
         },
-        on: {
-          slideChange() {
-            console.log('onSlideChangeEnd', this);
-          },
-          tap() {
-            console.log('onTap', this);
-          }
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         }
       }
     };
@@ -103,24 +101,5 @@ img {
   background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(8, 8, 8));
   position: absolute;
   width: 100%;
-}
-
-.my-swiper {
-  height: 300px;
-  width: 100%;
-  .swiper-slide {
-    text-align: center;
-    // font-size: 38px;
-    // font-weight: 700;
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .swiper-pagination {
-    > .swiper-pagination-bullet {
-      background-color: red;
-    }
-  }
 }
 </style>
