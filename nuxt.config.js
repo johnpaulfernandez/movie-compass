@@ -24,12 +24,16 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    'swiper/dist/css/swiper.css'
+  ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/fontawesome.js'],
+  plugins: ['~/plugins/fontawesome.js',
+  { src: "~/plugins/nuxt-swiper-plugin.js", ssr: false }],
 
   /*
    ** Nuxt.js modules
