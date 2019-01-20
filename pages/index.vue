@@ -9,11 +9,11 @@
 import axios from "axios";
 import Poster from "../components/Poster.vue";
 
-const gnoteApikey = "";
+const gnoteApiKey = process.env.VUE_APP_GRACENOTE_API_KEY;
 const gnoteBaseUrl = "http://data.tmsapi.com/v1.1";
 const gnoteShowtimesUrl = `${gnoteBaseUrl}/movies/showings`;
 
-const movieDbApiKey = "";
+const movieDbApiKey = process.env.VUE_APP_MOVIEDB_API_KEY;
 const movieDbBaseUrl = "https://api.themoviedb.org/3";
 const movieDbNowPlayingUrl = `${movieDbBaseUrl}/movie/now_playing`;
 
@@ -39,7 +39,7 @@ export default {
           `${movieDbNowPlayingUrl}?api_key=${movieDbApiKey}&language=en-US&page=1`
         ),
         axios.get(
-          `${gnoteShowtimesUrl}?startDate=${today}&zip=${zipCode}&api_key=${gnoteApikey}`
+          `${gnoteShowtimesUrl}?startDate=${today}&zip=${zipCode}&api_key=${gnoteApiKey}`
         )
       ])
       .then(

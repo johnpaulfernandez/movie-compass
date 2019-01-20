@@ -1,5 +1,7 @@
 const pkg = require('./package');
 
+require('dotenv').config()
+
 module.exports = {
   mode: 'universal',
 
@@ -33,7 +35,7 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: ['~/plugins/fontawesome.js',
-  { src: "~/plugins/nuxt-swiper-plugin.js", ssr: false }],
+    { src: "~/plugins/nuxt-swiper-plugin.js", ssr: false }],
 
   /*
    ** Nuxt.js modules
@@ -43,6 +45,8 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Axios module configuration
@@ -58,7 +62,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
+    extend (config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
