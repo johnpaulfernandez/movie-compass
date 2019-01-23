@@ -2,7 +2,7 @@
   <section>
     <div v-swiper:mySwiper="swiperOption">
       <div class="swiper-wrapper">
-        <div v-for="movie in movies.results" :key="movie.id" class="swiper-slide">
+        <div v-for="movie in movies" :key="movie.id" class="swiper-slide">
           <img :src="BASE_IMAGE_URL + movie.backdrop_path" :alt="movie.title" class="parallax-poster">
 
           <div slot="button-prev" class="swiper-button-prev d-none d-sm-block ml-4 swiper-button-white"/>
@@ -11,8 +11,8 @@
           <div class="row text-light bg-gradient ml-auto parallax-overlay">
             <div class="col-lg-8 px-5 p-2">
               <h1 class="text-uppercase">{{ movie.title }}</h1>
-              <h5>1:30 | PG | Drama</h5>
-              <h5 class="lead">{{ movie.overview }}</h5>
+              <h5>{{ movie.runtime[3] }}:{{ movie.runtime[5] }}{{ movie.runtime[6] }} | {{ movie.ratings[0].code }} | {{ movie.genre[0] }}</h5>
+              <h5 class="lead">{{ movie.shortDescription }}</h5>
             </div>
             <div class="col-lg-4 text-center">
               <font-awesome-icon id="icon" icon="thumbs-down" class="my-xl-4 my-sm-4 my-xs-5 mr-5 my-3 fa-flip-horizontal"/>
@@ -30,7 +30,7 @@
 export default {
   props: {
     movies: {
-      type: Object,
+      type: Array,
       default: null
     }
   },

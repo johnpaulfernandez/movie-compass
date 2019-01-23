@@ -40,6 +40,18 @@ export default {
             graceNoteRes.data.some(gnoteMovie => gnoteMovie.title === mdbMovie.title)
           );
 
+          for (let i = 0; i < movieDbResFiltered.length; i += 1) {
+            const gnIdx = graceNoteRes.data.findIndex(gnoteMovie => gnoteMovie.title === movieDbResFiltered[i].title);
+
+            if (gnIdx >= 0) {
+              movieDbResFiltered[i].showtimes = graceNoteRes.data[gnIdx].showtimes;
+              movieDbResFiltered[i].genre = graceNoteRes.data[gnIdx].genres;
+              movieDbResFiltered[i].runtime = graceNoteRes.data[gnIdx].runTime;
+              movieDbResFiltered[i].ratings = graceNoteRes.data[gnIdx].ratings;
+              movieDbResFiltered[i].shortDescription = graceNoteRes.data[gnIdx].shortDescription;
+            }
+          }
+
           return {
             movieDbMovies: movieDbResFiltered
           };
