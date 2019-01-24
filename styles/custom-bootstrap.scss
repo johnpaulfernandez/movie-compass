@@ -1,9 +1,23 @@
-$white: #fff !default;
-$primary: $white !default;
+$rosewood: #660011;
+$wine: #812E3C;
+$spanish-gray: #919098;
+$isabelline: #F1ECED;
+$licorice: #141210;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+$primary: $rosewood;
+$secondary: $wine;
 
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
+  
+  background-color: $licorice;
+}
+
+a{
+  color: $isabelline;
+}
+
+a:hover {
+  color: $spanish-gray;
 }

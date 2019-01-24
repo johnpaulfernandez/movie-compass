@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="info" class="fixed-top px-sm-5">
+  <b-navbar toggleable="md" type="dark" variant="transparent" class="fixed-top px-sm-5">
     <b-navbar-toggle target="nav_collapse"/>
 
     <nuxt-link to="/" class="navbar-brand">Movie Compass</nuxt-link>
