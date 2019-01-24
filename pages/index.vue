@@ -1,6 +1,7 @@
 <template>
   <section class="container-fluid">
     <Poster :movies="movieDbMovies"/>
+    <Content/>
     <div style="height: 1000px"/>
   </section>
 </template>
@@ -8,6 +9,7 @@
 <script>
 import axios from "axios";
 import Poster from "../components/Poster.vue";
+import Content from "../components/Content.vue";
 
 const gnoteApiKey = process.env.VUE_APP_GRACENOTE_API_KEY;
 const gnoteBaseUrl = "http://data.tmsapi.com/v1.1";
@@ -23,10 +25,13 @@ const today = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 
 export default {
   components: {
-    Poster
+    Poster,
+    Content
   },
   data() {
-    return {};
+    return {
+      movieDbMovies: null
+    };
   },
   asyncData() {
     return axios
