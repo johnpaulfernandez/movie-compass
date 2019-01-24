@@ -1,11 +1,23 @@
-$red: #660011 !default;
-$primary: $red !default;
+$rosewood: #660011;
+$wine: #812E3C;
+$spanish-gray: #919098;
+$isabelline: #F1ECED;
+$licorice: #141210;
+
+$primary: $rosewood;
+$secondary: $wine;
 
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
+  
+  background-color: $licorice;
 }
 
-.navbar .bg-info {
-  background-color: $primary;
+a{
+  color: $isabelline;
+}
+
+a:hover {
+  color: $spanish-gray;
 }
