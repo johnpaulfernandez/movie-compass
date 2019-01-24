@@ -26,37 +26,40 @@ export default {
     Poster
   },
   data() {
-    return {
-      movieDbMovies: null,
-      gnoteMovies: null,
-      movies: null
-    };
+    return {};
   },
   asyncData() {
     return axios
       .all([
-        axios.get(
-          `${movieDbNowPlayingUrl}?api_key=${movieDbApiKey}&language=en-US&page=1`
-        ),
-        axios.get(
-          `${gnoteShowtimesUrl}?startDate=${today}&zip=${zipCode}&api_key=${gnoteApiKey}`
-        )
+        axios.get(`${movieDbNowPlayingUrl}?api_key=${movieDbApiKey}&language=en-US&page=1&region=US`),
+        axios.get(`${gnoteShowtimesUrl}?startDate=${today}&zip=${zipCode}&api_key=${gnoteApiKey}`)
       ])
       .then(
-        axios.spread((movieDbRes, graceNoteRes) => ({
-          movieDbMovies: movieDbRes.data,
-          gnoteMovies: graceNoteRes.data
-        }))
+        axios.spread((movieDbRes, graceNoteRes) => {
+          const movieDbResFiltered = movieDbRes.data.results.filter(mdbMovie =>
+            graceNoteRes.data.some(gnoteMovie => gnoteMovie.title === mdbMovie.title)
+          );
+
+          for (let i = 0; i < movieDbResFiltered.length; i += 1) {
+            const gnIdx = graceNoteRes.data.findIndex(gnoteMovie => gnoteMovie.title === movieDbResFiltered[i].title);
+
+            if (gnIdx >= 0) {
+              movieDbResFiltered[i].showtimes = graceNoteRes.data[gnIdx].showtimes;
+              movieDbResFiltered[i].genre = graceNoteRes.data[gnIdx].genres;
+              movieDbResFiltered[i].runtime = graceNoteRes.data[gnIdx].runTime;
+              movieDbResFiltered[i].ratings = graceNoteRes.data[gnIdx].ratings;
+              movieDbResFiltered[i].shortDescription = graceNoteRes.data[gnIdx].shortDescription;
+            }
+          }
+
+          return {
+            movieDbMovies: movieDbResFiltered
+          };
+        })
       )
       .catch(e => {
         console.log(e);
       });
-  },
-  methods: {
-    buildMovies() {
-      // this.movies = this.movieDbMovies;
-      return this.movies;
-    }
   }
 };
 </script>
