@@ -7,7 +7,7 @@
     <b-collapse id="nav_collapse" class="ml-md-5" is-nav>
       <b-navbar-nav>
         <nuxt-link to="/" class="nav-link">Home</nuxt-link>
-        <nuxt-link to="/listings" class="nav-link">Listings</nuxt-link>
+        <nuxt-link to="/listings" class="nav-link">All Movies</nuxt-link>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->

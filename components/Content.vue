@@ -1,16 +1,16 @@
 <template>
-  <section class="container pt-3 content-main">
-    <b-tabs id="content-navbar" pills card class="justify-content-center px-5">
-      <b-tab title="Showtimes" class="flex-fill">
+  <section class="container-fluid pt-3 content-main">
+    <b-tabs id="content-navbar" pills card class="px-5">
+      <b-tab title="SHOWTIMES">
         <Details/>
       </b-tab>
-      <b-tab title="Details" active>
+      <b-tab title="DETAILS" active>
         <Details/>
       </b-tab>
-      <b-tab title="Trailers">
+      <b-tab title="TRAILERS">
         <Details/>
       </b-tab>
-      <b-tab title="More...">
+      <b-tab title="REVIEWS">
         <Details/>
       </b-tab>
     </b-tabs>

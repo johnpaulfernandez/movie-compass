@@ -23,5 +23,23 @@ a:hover {
 }
 
 .card-header {
-  background-color: $primary;
+  padding: 0;
+  background-color: #141210;
+  border: none;
+  @extend .d-flex;
+  // @extend .fixed-bottom;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #660011;
+  @extend .rounded-0;
+}
+
+.card-header ul{
+  @extend .mx-auto;
+}
+
+.card-header ul > li {
+  @extend .mx-sm-4;
 }
