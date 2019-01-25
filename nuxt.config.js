@@ -35,7 +35,8 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: ['~/plugins/fontawesome.js',
-    { src: "~/plugins/nuxt-swiper-plugin.js", ssr: false }],
+    { src: "~/plugins/nuxt-swiper-plugin.js", ssr: false },
+    '~/plugins/directives.js'],
 
   /*
    ** Nuxt.js modules

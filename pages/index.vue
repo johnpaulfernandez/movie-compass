@@ -2,7 +2,6 @@
   <section class="container-fluid">
     <Poster :movies="movieDbMovies"/>
     <Content/>
-    <div style="height: 1000px"/>
   </section>
 </template>
 

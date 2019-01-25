@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="transparent" class="fixed-top px-sm-5">
+  <b-navbar v-scroll="handleScroll" toggleable="md" type="dark" class="fixed-top px-sm-5">
     <b-navbar-toggle target="nav_collapse"/>
 
     <nuxt-link to="/" class="navbar-brand">Movie Compass</nuxt-link>
@@ -31,7 +31,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+    handleScroll(evt, el) {
+      if (window.scrollY > 550) {
+        el.setAttribute("style", "background-color: #660011; opacity: 0.9; transition: background-color 200ms linear");
+      } else {
+        el.setAttribute("style", "background-color: none; transition: background-color 200ms linear");
+      }
+    }
+  }
+};
 </script>
 
 <style>
