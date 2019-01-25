@@ -1,8 +1,8 @@
 <template>
   <section class="container-fluid">
-    <b-nav justified tabs type="light" class="justify-content-center mx-auto col-lg-8 px-5 mb-2">
-      <b-nav-item>Details</b-nav-item>
-      <b-nav-item active>Showtimes</b-nav-item>
+    <b-nav justified tabs type="light" class="justify-content-center mx-auto col-lg-8 px-5 mb-2 fixed-bottom">
+      <b-nav-item>Showtimes</b-nav-item>
+      <b-nav-item active>Details</b-nav-item>
       <b-nav-item>Trailers</b-nav-item>
       <b-nav-item>More...</b-nav-item>
     </b-nav>

@@ -1,5 +1,5 @@
 <template>
-  <div/>
+  <div class="container-fluid" style="height: 712px"/>
 </template>
 
 <script>

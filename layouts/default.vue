@@ -32,6 +32,7 @@ html {
 
 html {
   font-size: 1rem;
+  background-color: $licorice;
 }
 
 @include media-breakpoint-up(xs) {
