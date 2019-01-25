@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container text-light my-5 pt-5" style="height: 616px">
+    <div class="container text-light my-5 pt-5" style="height: 510px">
       <div class="row">
         <div class="col-md-9">
           <h5>Synopsis</h5>
