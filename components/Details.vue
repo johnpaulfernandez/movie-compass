@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <div class="container text-light pt-5" style="height: 612px">
+  <section id="details-section">
+    <div class="container text-light pt-5">
       <div class="row">
         <div class="col-md-9">
           <h5>Synopsis</h5>
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <img src="https://image.tmdb.org/t/p/original/fw02ONlDhrYjTSZV8XO6hhU3ds3.jpg" alt class="poster">
+          <img src="https://image.tmdb.org/t/p/original/fw02ONlDhrYjTSZV8XO6hhU3ds3.jpg" alt class="d-none d-md-block">
         </div>
       </div>
     </div>

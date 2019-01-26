@@ -30,6 +30,10 @@ a:hover {
   // @extend .fixed-bottom;
 }
 
+.card {
+  border: none;
+}
+
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   background-color: #660011;

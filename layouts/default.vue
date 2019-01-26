@@ -43,6 +43,14 @@ html {
   #icon {
     font-size: 2rem;
   }
+
+  #nav-scroller,
+  #showtimes-section,
+  #details-section,
+  #trailers-section,
+  #reviews-section {
+    height: 612px;
+  }
 }
 
 @include media-breakpoint-up(sm) {
@@ -78,6 +86,14 @@ html {
 
   #icon {
     font-size: 4rem;
+  }
+
+  #nav-scroller,
+  #showtimes-section,
+  #details-section,
+  #trailers-section,
+  #reviews-section {
+    height: 773px;
   }
 }
 </style>
