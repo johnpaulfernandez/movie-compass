@@ -36,7 +36,8 @@ module.exports = {
    */
   plugins: ['~/plugins/fontawesome.js',
     { src: "~/plugins/nuxt-swiper-plugin.js", ssr: false },
-    '~/plugins/directives.js'],
+    '~/plugins/directives.js',
+    '~/plugins/vue-scrollto.js'],
 
   /*
    ** Nuxt.js modules
