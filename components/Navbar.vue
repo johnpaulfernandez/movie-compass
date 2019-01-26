@@ -1,5 +1,5 @@
 <template>
-  <b-navbar v-scroll="handleScroll" toggleable="md" type="dark" class="fixed-top px-sm-5">
+  <b-navbar v-scroll="handleScroll" v-scroll-to="{ el: 'img', duration: 500}" toggleable="md" type="dark" class="fixed-top px-sm-5">
     <b-navbar-toggle target="nav_collapse"/>
 
     <nuxt-link to="/" class="navbar-brand">Movie Compass</nuxt-link>
@@ -7,7 +7,7 @@
     <b-collapse id="nav_collapse" class="ml-md-5" is-nav>
       <b-navbar-nav>
         <nuxt-link to="/" class="nav-link">Home</nuxt-link>
-        <nuxt-link to="/listings" class="nav-link">Listings</nuxt-link>
+        <nuxt-link to="/listings" class="nav-link">All Movies</nuxt-link>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -38,9 +38,9 @@ export default {
   methods: {
     handleScroll(evt, el) {
       if (window.scrollY > 550) {
-        el.setAttribute("style", "background-color: #660011; opacity: 0.9; transition: background-color 200ms linear");
+        el.setAttribute("style", "background-color: #660011; opacity: 0.9; transition: background-color 10ms linear");
       } else {
-        el.setAttribute("style", "background-color: none; transition: background-color 200ms linear");
+        el.setAttribute("style", "background-color: none; transition: background-color 10ms linear");
       }
     }
   }
