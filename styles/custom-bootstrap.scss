@@ -1,0 +1,49 @@
+$rosewood: #660011;
+$wine: #812E3C;
+$spanish-gray: #919098;
+$isabelline: #F1ECED;
+$licorice: #141210;
+
+$primary: $rosewood;
+$secondary: $wine;
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  
+  background-color: $licorice;
+}
+
+a{
+  color: $isabelline;
+}
+
+a:hover {
+  color: $spanish-gray;
+}
+
+.card-header {
+  padding: 0;
+  background-color: #141210;
+  border: none;
+  @extend .d-flex;
+  // @extend .fixed-bottom;
+}
+
+.card {
+  border: none;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #660011;
+  @extend .rounded-0;
+}
+
+.card-header ul{
+  @extend .mx-auto;
+}
+
+.card-header ul > li {
+  @extend .mx-sm-4;
+}

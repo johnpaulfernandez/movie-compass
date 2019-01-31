@@ -1,11 +1,26 @@
 <template>
-  <div><nuxt /></div>
+  <section class="container-fluid">
+    <Navbar/>
+    <nuxt/>
+  </section>
 </template>
 
-<style>
+<script>
+import Navbar from "../components/Navbar.vue";
+
+export default {
+  components: {
+    Navbar
+  }
+};
+</script>
+
+
+<style lang="scss">
+@import "./styles/app.scss";
+
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -15,39 +30,70 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+html {
+  font-size: 1rem;
+  background-color: $licorice;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+@include media-breakpoint-up(xs) {
+  html {
+    font-size: 0.7rem;
+  }
+  h1,
+  #icon {
+    font-size: 2rem;
+  }
+
+  #nav-scroller,
+  #showtimes-section,
+  #details-section,
+  #trailers-section,
+  #reviews-section {
+    height: 612px;
+  }
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  h1,
+  #icon {
+    font-size: 3rem;
+  }
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  h1,
+  #icon {
+    font-size: 3rem;
+  }
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  #icon {
+    font-size: 4rem;
+  }
+
+  #nav-scroller,
+  #showtimes-section,
+  #details-section,
+  #trailers-section,
+  #reviews-section {
+    height: 773px;
+  }
 }
 </style>
