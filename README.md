@@ -1,4 +1,4 @@
-# movie-compass
+# Movie Compass
 
 > My magnificent Nuxt.js project
 
